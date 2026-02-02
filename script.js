@@ -281,43 +281,45 @@ window.addEventListener('scroll', () => {
 
 // Hero title is now displayed directly without animation
 
-// Counter animation for stats
-function animateCounter(element, target, duration = 2000) {
+// Counter animation for stats（可保留後綴 + 或 %）
+function animateCounter(element, target, suffix = '', duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
     
     function updateCounter() {
         start += increment;
         if (start < target) {
-            element.textContent = Math.floor(start);
+            element.textContent = Math.floor(start) + suffix;
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target;
+            element.textContent = target + suffix;
         }
     }
     
     updateCounter();
 }
 
-// Trigger counter animation when stats section is visible
+// Trigger counter animation when about section is visible（右側 .stat-item h3）
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-item h3');
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.textContent);
-                if (target && !stat.classList.contains('animated')) {
-                    stat.classList.add('animated');
-                    animateCounter(stat, target);
+            const runCounter = (el) => {
+                const raw = el.textContent;
+                const target = parseInt(raw, 10);
+                if (target && !el.classList.contains('animated')) {
+                    el.classList.add('animated');
+                    const suffix = raw.includes('+') ? '+' : raw.includes('%') ? '%' : '';
+                    animateCounter(el, target, suffix);
                 }
-            });
+            };
+            entry.target.querySelectorAll('.stat-item h3').forEach(runCounter);
         }
     });
 }, { threshold: 0.5 });
 
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
+const aboutSection = document.querySelector('#about');
+if (aboutSection) {
+    statsObserver.observe(aboutSection);
 }
 
 // Add hover effects to service cards
