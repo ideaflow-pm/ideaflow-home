@@ -35,7 +35,6 @@ section[id],header[id]{scroll-margin-top:72px}
   font-family:var(--mono);
   font-size:.72rem;
   letter-spacing:.22em;
-  text-transform:uppercase;
   color:var(--primary);
   display:flex;align-items:center;gap:12px;
 }
