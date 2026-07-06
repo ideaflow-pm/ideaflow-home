@@ -145,16 +145,29 @@ nav{
 .proof-item b i{font-style:normal;color:var(--primary);font-size:1.15rem}
 .proof-item span{font-size:.78rem;color:var(--muted);letter-spacing:.12em}
 
-/* Hero 右側：後台迷你畫面 */
-.hero-visual{position:relative;align-self:end;padding-bottom:0}
+/* Hero 右側：後台視窗 + 手機點餐（完整構圖，垂直置中） */
+.hero-visual{position:relative;padding:0 24px 34px 0}
 .mock-window{
   background:#fff;
   border:1px solid var(--line);
-  border-radius:10px 10px 0 0;
-  box-shadow:0 40px 80px rgba(44,95,139,.22);
+  border-radius:10px;
+  box-shadow:0 30px 70px rgba(44,95,139,.22);
   overflow:hidden;
-  transform:translateY(28px);
 }
+.hero-phone{
+  position:absolute;right:0;bottom:0;width:138px;
+  background:#FDFDFB;border-radius:20px;
+  border:5px solid var(--primary-deep);
+  box-shadow:0 20px 44px rgba(44,95,139,.32);
+  padding:14px 10px 12px;
+  z-index:2;
+  animation:float 6s ease-in-out infinite;
+}
+.hero-phone::before{
+  content:"";display:block;width:44px;height:5px;border-radius:3px;
+  background:var(--primary-deep);margin:0 auto 10px;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .mock-bar{
   display:flex;align-items:center;gap:6px;
   padding:10px 14px;border-bottom:1px solid var(--line-soft);
