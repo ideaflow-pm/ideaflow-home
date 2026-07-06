@@ -98,8 +98,9 @@ nav{
 }
 .hero-in{
   position:relative;z-index:1;
-  max-width:1120px;margin:0 auto;padding:84px 28px 0;
+  max-width:1120px;margin:0 auto;padding:48px 28px 0;
   display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+  min-height:calc(100vh - 64px); /* 佔滿第一屏（扣掉 64px 導覽列），避免下一區探頭 */
 }
 .hero h1{
   font-size:clamp(2.1rem,4.4vw,3.15rem);
@@ -207,7 +208,7 @@ nav{
 .order-line.mid{width:80%}
 
 @media(max-width:920px){
-  .hero-in{grid-template-columns:1fr;padding-top:64px}
+  .hero-in{grid-template-columns:1fr;padding-top:64px;min-height:0}
   .hero-visual{display:none}
   .hero-proof{flex-wrap:wrap;gap:18px}
   .proof-item{padding-right:24px;margin-right:24px}
