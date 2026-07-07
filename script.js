@@ -1,3 +1,23 @@
+// ============ 事件追蹤（GA4 + GTM）============
+// gtag('event', ...) 送 GA4；dataLayer.push({event:...}) 供 GTM 自訂事件觸發條件使用
+function track(eventName, params = {}) {
+    if (typeof gtag === 'function') {
+        gtag('event', eventName, params);
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: eventName }, params));
+}
+
+// 「預約需求訪談」CTA 點擊（nav / hero / contact_form）
+document.querySelectorAll('[data-cta]').forEach(el => {
+    el.addEventListener('click', () => {
+        track('cta_click', {
+            cta_location: el.dataset.cta,
+            cta_text: el.textContent.trim()
+        });
+    });
+});
+
 // ============ 進場動畫 ============
 const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -64,11 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
             .then(() => {
                 showNotification('已收到您的訊息，我們會盡快與您聯繫！', 'success');
+                track('generate_lead', { service_type: data.service_type });
                 form.reset();
             })
             .catch((error) => {
                 console.error('EmailJS error:', error?.status, error?.text || error);
                 showNotification('送出失敗，請稍後再試，或直接來信 ideaflow.pm@gmail.com。', 'error');
+                track('lead_form_error', { error_status: String(error?.status || 'unknown') });
             })
             .finally(() => {
                 btn.disabled = false;

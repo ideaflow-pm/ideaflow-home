@@ -8,6 +8,23 @@
     <meta name="keywords" content="軟體開發,客製系統,系統整合,網站設計,數位轉型,軟體顧問,台中,ideaFlow,思程科技">
     <link rel="canonical" href="https://www.ideaflow.com.tw/">
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PHTSDS7L');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) — GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YJK2W8P5P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3YJK2W8P5P');
+    </script>
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="思程科技 ideaFlow — 從想法，到上線運轉的系統">
@@ -46,6 +63,10 @@
     </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHTSDS7L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav>
   <div class="nav-in">
@@ -57,7 +78,7 @@
       <li><a href="#cases">實績案例</a></li>
       <li><a href="#services">服務項目</a></li>
       <li><a href="#process">合作方式</a></li>
-      <li><a href="#contact" class="nav-cta">預約需求訪談</a></li>
+      <li><a href="#contact" class="nav-cta" data-cta="nav">預約需求訪談</a></li>
     </ul>
   </div>
 </nav>
@@ -69,7 +90,7 @@
       <h1>從想法，<br><span class="nowrap">到<span class="accent">上線運轉</span>的系統。</span></h1>
       <p class="lede">思程科技替餐飲、服務與中小企業打造客製系統——需求訪談、架構規劃、開發到部署維運，同一組人負責到底。</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">預約 30 分鐘需求訪談</a>
+        <a class="btn btn-primary" href="#contact" data-cta="hero">預約 30 分鐘需求訪談</a>
         <a class="btn btn-ghost" href="#cases">看實際案例</a>
       </div>
       <div class="hero-proof">
@@ -280,7 +301,7 @@
           <option value="軟體規劃顧問">軟體規劃顧問</option>
         </select>
         <textarea name="message" placeholder="簡單描述你的需求或遇到的問題" rows="5" required></textarea>
-        <button class="f-submit" type="submit">預約需求訪談</button>
+        <button class="f-submit" type="submit" data-cta="contact_form">預約需求訪談</button>
       </form>
     </div>
   </div>
@@ -296,6 +317,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>
