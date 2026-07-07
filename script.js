@@ -1,9 +1,6 @@
-// ============ 事件追蹤（GA4 + GTM）============
-// gtag('event', ...) 送 GA4；dataLayer.push({event:...}) 供 GTM 自訂事件觸發條件使用
+// ============ 事件追蹤 ============
+// 事件推進 dataLayer，由 GTM (GTM-PHTSDS7L) 的自訂事件觸發條件接手送 GA4
 function track(eventName, params = {}) {
-    if (typeof gtag === 'function') {
-        gtag('event', eventName, params);
-    }
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event: eventName }, params));
 }
