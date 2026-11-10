@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>思程科技 ideaFlow — 客製系統開發・系統整合・軟體顧問</title>
-    <meta name="description" content="思程科技替餐飲、服務與中小企業打造客製系統——需求訪談、架構規劃、開發到部署維運，同一組人負責到底。實績包含 Goose 餐飲點餐管理系統、LastWord.love、飄帶地圖與 NightCap。">
+    <meta name="description" content="思程科技替餐飲、服務與中小企業打造客製系統——需求訪談、架構規劃、開發到部署維運，同一組人負責到底。實績包含 Goose 餐飲點餐系統、ARMS 旅宿 AI 收益管理平台、LastWord.love、飄帶地圖與 NightCap。">
     <meta name="keywords" content="軟體開發,客製系統,系統整合,網站設計,數位轉型,軟體顧問,台中,ideaFlow,思程科技">
     <link rel="canonical" href="https://www.ideaflow.com.tw/">
 
@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles.css?v=10">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -154,6 +154,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="menu-row"><span class="n">燙青菜</span><span class="p">$40</span><span class="add">+</span></div>
             <div class="menu-row"><span class="n">貢丸湯</span><span class="p">$35</span><span class="add">+</span></div>
             <div class="phone-cta">查看購物車 · 3 項</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-info">
+          <span class="case-kind">連鎖旅宿集團 · AI 營運決策平台</span>
+          <h3>ARMS <span class="nowrap">旅宿收益管理</span></h3>
+          <div class="sub">AI 每天決定房價與超賣，在護欄內自動執行</div>
+          <p>為近 60 家直營旅宿、500 多個房型，在既有 PMS 之上打造 AI 決策層：每天為未來 30 天的每個房型算出建議價與安全超賣量，通過護欄後自動回寫 PMS——不改既有系統一行程式，四個月從開案到全自動閉環上線。</p>
+          <ul class="case-points">
+            <li>全自動閉環 7×24 運作，最密每 4 小時重算一輪價格</li>
+            <li>「自動化有界線」：硬限絕不越過、統計軟限轉人工核准，每筆決策附白話理由與審計</li>
+            <li>150 萬筆歷史訂單學出各館訂房曲線，收益團隊經驗化為可執行規則</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Next.js</span><span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span><span class="tag">Kubernetes</span>
+            <span class="tag">LLM</span>
+          </div>
+        </div>
+        <div class="case-visual arms-visual" aria-hidden="true">
+          <div class="arms-window">
+            <div class="mock-bar">
+              <i></i><i></i><i></i>
+              <span class="mock-url">ARMS — 收益控價 · 決策看板</span>
+            </div>
+            <div class="arms-body">
+              <div class="arms-side">
+                <span class="on">收益控價</span>
+                <span>超賣與升等</span>
+                <span>房務排班</span>
+                <span>客群輪廓</span>
+                <span>AI 成效分析</span>
+              </div>
+              <div class="arms-main">
+                <div class="arms-head"><b>未來 30 天 · 建議價</b><span class="arms-auto">自動套用中</span></div>
+                <table class="arms-grid">
+                  <tr><th></th><th>11/12</th><th>11/13</th><th>11/14</th></tr>
+                  <tr><th>雙人房</th><td>$3,200 <i class="up">↑</i></td><td>$3,400 <i class="up">↑</i></td><td class="hold">$5,800<span class="approve">需核准</span></td></tr>
+                  <tr><th>雙床房</th><td>$3,600 <i class="dn">↓</i></td><td>$3,600</td><td>$4,200 <i class="up">↑</i></td></tr>
+                  <tr><th>家庭房</th><td>$5,200</td><td>$5,400 <i class="up">↑</i></td><td>$6,800 <i class="up">↑</i></td></tr>
+                </table>
+                <div class="arms-audit">✓ 已套用 12 筆 · 理由：競品走高、訂房速度超前</div>
+              </div>
+            </div>
           </div>
         </div>
       </article>

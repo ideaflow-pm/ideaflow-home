@@ -571,3 +571,74 @@ footer small{font-size:.76rem;letter-spacing:.06em}
   font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;
   color:rgba(238,232,219,.45);
 }
+
+/* ============ ARMS 案例視覺（CSS 示意畫面） ============ */
+.arms-visual{background:linear-gradient(150deg,#E2F3EE,#CFE9DF)}
+.arms-visual::before{
+  background:
+    repeating-linear-gradient(0deg,transparent 0 39px,rgba(15,122,103,.08) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,rgba(15,122,103,.08) 39px 40px);
+}
+.arms-window{
+  position:relative;width:86%;max-width:430px;
+  background:#fff;border:1px solid rgba(15,122,103,.2);
+  border-radius:8px;overflow:hidden;
+  box-shadow:0 24px 50px rgba(15,90,75,.28);
+}
+.arms-body{display:flex;min-height:214px}
+.arms-side{
+  width:88px;flex-shrink:0;
+  border-right:1px solid rgba(15,122,103,.1);
+  background:#F4FAF8;padding:12px 0;
+  display:flex;flex-direction:column;gap:2px;
+}
+.arms-side span{
+  font-size:.56rem;color:#5F7A72;padding:5px 12px;
+}
+.arms-side span.on{
+  color:#0F7A67;font-weight:700;background:rgba(15,122,103,.1);
+  border-right:2px solid #0F7A67;
+}
+.arms-main{flex:1;padding:12px 14px;min-width:0}
+.arms-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+.arms-head b{font-size:.62rem;color:#1E3A33;letter-spacing:.05em}
+.arms-auto{
+  font-family:var(--mono);font-size:.52rem;color:#0F7A67;letter-spacing:.06em;
+  background:rgba(15,122,103,.1);padding:2px 9px;border-radius:12px;
+  display:flex;align-items:center;gap:5px;
+}
+.arms-auto::before{
+  content:"";width:5px;height:5px;border-radius:50%;background:#0F7A67;
+  animation:pulse 1.8s infinite;
+}
+.arms-grid{
+  width:100%;border-collapse:collapse;
+  font-variant-numeric:tabular-nums;
+}
+.arms-grid th,.arms-grid td{
+  font-size:.56rem;padding:5px 4px;text-align:center;
+  border:1px solid rgba(15,122,103,.1);font-weight:400;
+}
+.arms-grid tr:first-child th{color:#5F7A72;background:#F4FAF8;font-size:.52rem}
+.arms-grid tr th:first-child{color:#1E3A33;font-weight:600;background:#F4FAF8;font-size:.54rem}
+.arms-grid td{color:#1E3A33;white-space:nowrap}
+.arms-grid td i{font-style:normal;font-size:.5rem}
+.arms-grid td i.up{color:#0F7A67}
+.arms-grid td i.dn{color:#C06A4E}
+.arms-grid td.hold{background:#FFF8E6;position:relative;padding-bottom:14px}
+.arms-grid .approve{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:2px;
+  font-size:.42rem;color:#8A6A14;background:#F5D96B;
+  padding:0 6px;border-radius:8px;letter-spacing:.04em;white-space:nowrap;
+}
+.arms-audit{
+  margin-top:9px;font-size:.52rem;color:#5F7A72;
+  background:#F4FAF8;border:1px solid rgba(15,122,103,.1);
+  border-radius:4px;padding:4px 9px;
+}
+.arms-auto{white-space:nowrap}
+.arms-grid tr th:first-child{white-space:nowrap}
+@media(max-width:560px){
+  .arms-side{display:none}
+  .arms-body{min-height:0}
+}
