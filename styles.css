@@ -642,3 +642,12 @@ footer small{font-size:.76rem;letter-spacing:.06em}
   .arms-side{display:none}
   .arms-body{min-height:0}
 }
+
+/* ============ 案例「查看全部」與案例頁 CTA ============ */
+.case-more{text-align:center;margin-top:48px}
+.cases-cta{
+  background:linear-gradient(160deg,var(--warm),var(--pale));
+  text-align:center;padding:84px 0;
+}
+.cases-cta .section-title{margin:0 0 10px}
+.cases-cta p{color:var(--muted);max-width:30em;margin:0 auto 30px}
