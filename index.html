@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>思程科技 ideaFlow — 客製系統開發・系統整合・軟體顧問</title>
-    <meta name="description" content="思程科技替餐飲、服務與中小企業打造客製系統——需求訪談、架構規劃、開發到部署維運，同一組人負責到底。實績包含 Goose 餐飲點餐管理系統與 LastWord.love。">
+    <meta name="description" content="思程科技替餐飲、服務與中小企業打造客製系統——需求訪談、架構規劃、開發到部署維運，同一組人負責到底。實績包含 Goose 餐飲點餐管理系統、LastWord.love、飄帶地圖與 NightCap。">
     <meta name="keywords" content="軟體開發,客製系統,系統整合,網站設計,數位轉型,軟體顧問,台中,ideaFlow,思程科技">
     <link rel="canonical" href="https://www.ideaflow.com.tw/">
 
@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -180,6 +180,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <i></i><i></i><i></i><i></i>
             <div class="send">SCHEDULED · 在對的時刻送達</div>
           </div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-info">
+          <span class="case-kind">思程科技自主開發公益專案 · 群眾協作地圖</span>
+          <h3><span class="nowrap">飄帶地圖</span> WaveMap</h3>
+          <div class="sub">競選小物哪裡領，地圖一看就知道</div>
+          <p>2026 九合一選舉期間，店家、競選服務處與熱心民眾都在發飄帶、風車等競選小物，資訊卻散落在各個社群貼文裡。飄帶地圖把領取點集中到一張手機地圖上：民眾免登入就能搜尋、導航；提供者用 LINE 登入即可登記自己的發放點。從需求定稿到正式網域上線，不到 24 小時。</p>
+          <ul class="case-points">
+            <li>「候選人＋小物類別」組合搜尋，結果同步顯示在地圖與清單</li>
+            <li>常設點與一次性發放分開處理，過期自動下架，不需人工清理</li>
+            <li>群眾回報「領到了／已發完」，問題回報累積後自動隱藏</li>
+          </ul>
+          <a class="case-link" href="https://wavemap.tw" target="_blank" rel="noopener">wavemap.tw ↗</a>
+          <div class="tags">
+            <span class="tag">Next.js</span><span class="tag">Supabase</span>
+            <span class="tag">PostGIS</span><span class="tag">MapLibre</span>
+            <span class="tag">LINE Login</span>
+          </div>
+        </div>
+        <div class="case-visual wm-visual" aria-hidden="true">
+          <div class="wm-phone">
+            <div class="wm-search">
+              <img src="assets/wavemap-icon.png" alt="">飄帶地圖
+              <span class="wm-chip">候選人</span><span class="wm-chip">風車</span>
+            </div>
+            <div class="wm-filters"><span>現在可領</span><span>日期</span><span>陣營</span></div>
+            <div class="wm-map">
+              <i class="wm-road r1"></i><i class="wm-road r2"></i><i class="wm-road r3"></i>
+              <span class="wm-pin" style="left:18%;top:18%">王</span>
+              <span class="wm-pin" style="left:58%;top:34%">林</span>
+              <span class="wm-pin" style="left:30%;top:58%">陳</span>
+              <span class="wm-pin wm-cluster" style="left:76%;top:12%">2</span>
+              <div class="wm-add">＋ 新增領取點</div>
+            </div>
+            <div class="wm-drawer">
+              <i class="wm-handle"></i>
+              <b>視野內 9 個領取點</b>
+              <div class="wm-row">
+                <i class="wm-ava"></i>
+                <span class="wm-lines"><i></i><i></i></span>
+                <span class="wm-tag">飄帶</span><em>尚有</em>
+              </div>
+              <div class="wm-row">
+                <i class="wm-ava"></i>
+                <span class="wm-lines"><i></i><i></i></span>
+                <span class="wm-tag">風車</span><em>尚有</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-info">
+          <span class="case-kind">消費者產品 · 網站與 iPhone App</span>
+          <h3>NightCap 調酒筆記</h3>
+          <div class="sub">手邊的酒不齊也能調的私人調酒筆記</div>
+          <p>把手邊的酒勾進酒櫃，它會列出今晚就能調的酒、缺一味時可以用哪瓶頂替，以及下一瓶買什麼能解鎖最多酒譜。內建 314 款附來源的經典酒譜，網站與 iPhone App 共用同一個帳號；網站已上線，App 準備上架中。</p>
+          <ul class="case-points">
+            <li>酒櫃四分頁：添加酒款、今晚調什麼、可替代酒譜、下一瓶買什麼</li>
+            <li>73 組替代配對附風味註記，AI 三方交叉審查、人工裁決</li>
+            <li>約兩週從原型到 iOS 送審準備，近 40 項自動化測試把關</li>
+          </ul>
+          <a class="case-link" href="https://nightcap-wheat.vercel.app/" target="_blank" rel="noopener">nightcap-wheat.vercel.app ↗</a>
+          <div class="tags">
+            <span class="tag">Next.js</span><span class="tag">React Native</span>
+            <span class="tag">Supabase</span><span class="tag">Vercel</span>
+            <span class="tag">TypeScript</span>
+          </div>
+          <p class="case-note">酒譜插圖為 AI 生成示意圖。請理性飲酒，未滿 18 歲請勿飲酒。</p>
+        </div>
+        <div class="case-visual nc-visual" aria-hidden="true">
+          <div class="nc-cards">
+            <img class="nc-card c1" src="assets/nc-espresso.webp" alt="Espresso Martini 調酒插圖">
+            <img class="nc-card c2" src="assets/nc-negroni.webp" alt="Negroni 調酒插圖">
+            <img class="nc-card c3" src="assets/nc-spritz.webp" alt="Spritz 調酒插圖">
+            <img class="nc-icon" src="assets/nightcap-icon.png" alt="NightCap App 圖示">
+          </div>
+          <span class="nc-note">插圖為 AI 生成示意圖</span>
         </div>
       </article>
     </div>
