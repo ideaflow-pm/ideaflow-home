@@ -611,33 +611,38 @@ footer small{font-size:.76rem;letter-spacing:.06em}
   content:"";width:5px;height:5px;border-radius:50%;background:#0F7A67;
   animation:pulse 1.8s infinite;
 }
-.arms-grid{
-  width:100%;border-collapse:collapse;
+.arms-feed{display:flex;flex-direction:column;gap:7px}
+.arms-card{
+  background:#F7FBF9;border:1px solid rgba(15,122,103,.14);
+  border-radius:6px;padding:7px 10px;
+}
+.arms-card.hold{background:#FFF8E6;border-color:rgba(199,160,48,.4)}
+.arms-row1{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.arms-row1 b{font-size:.6rem;color:#1E3A33;font-weight:600;white-space:nowrap}
+.arms-price{
+  font-size:.58rem;color:#8A9A93;white-space:nowrap;
   font-variant-numeric:tabular-nums;
 }
-.arms-grid th,.arms-grid td{
-  font-size:.56rem;padding:5px 4px;text-align:center;
-  border:1px solid rgba(15,122,103,.1);font-weight:400;
+.arms-price i{font-style:normal;color:#A8B8B1;margin:0 3px}
+.arms-price em{font-style:normal;font-weight:700;font-size:.66rem}
+.arms-price em.up{color:#0F7A67}
+.arms-price em.dn{color:#C06A4E}
+.arms-row2{
+  display:flex;align-items:center;gap:6px;margin-top:4px;
+  font-size:.5rem;color:#7A8B84;
 }
-.arms-grid tr:first-child th{color:#5F7A72;background:#F4FAF8;font-size:.52rem}
-.arms-grid tr th:first-child{color:#1E3A33;font-weight:600;background:#F4FAF8;font-size:.54rem}
-.arms-grid td{color:#1E3A33;white-space:nowrap}
-.arms-grid td i{font-style:normal;font-size:.5rem}
-.arms-grid td i.up{color:#0F7A67}
-.arms-grid td i.dn{color:#C06A4E}
-.arms-grid td.hold{background:#FFF8E6;position:relative;padding-bottom:14px}
-.arms-grid .approve{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:2px;
-  font-size:.42rem;color:#8A6A14;background:#F5D96B;
-  padding:0 6px;border-radius:8px;letter-spacing:.04em;white-space:nowrap;
+.arms-pill{
+  font-size:.46rem;padding:1px 8px;border-radius:10px;
+  letter-spacing:.04em;flex-shrink:0;white-space:nowrap;
 }
+.arms-pill.ok{background:rgba(15,122,103,.12);color:#0F7A67}
+.arms-pill.warn{background:#F5D96B;color:#7A5E00;font-weight:700}
 .arms-audit{
   margin-top:9px;font-size:.52rem;color:#5F7A72;
   background:#F4FAF8;border:1px solid rgba(15,122,103,.1);
   border-radius:4px;padding:4px 9px;
 }
 .arms-auto{white-space:nowrap}
-.arms-grid tr th:first-child{white-space:nowrap}
 @media(max-width:560px){
   .arms-side{display:none}
   .arms-body{min-height:0}
